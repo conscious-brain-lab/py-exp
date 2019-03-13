@@ -14,8 +14,6 @@ from math import *
 from IPython import embed as shell
 import shutil
 from psychopy import logging, visual, clock, event, core
-from psychopy import parallel
-from psychopy.sound import Sound
 
 logging.console.setLevel(logging.CRITICAL)
 
@@ -23,8 +21,7 @@ import exptools
 from exptools.core.trial import Trial
 from exptools.core.session import EyelinkSession
 
-from psychopy.tools.attributetools import attributeSetter, setAttribute
-from psychopy.visual import GratingStim, TextStim, ImageStim, NoiseStim, DotStim, Window
+from psychopy.visual import GratingStim, TextStim, NoiseStim
 
 from pygaze import libscreen
 from pygaze import libtime
