@@ -4,7 +4,7 @@ Implement and track a staircase procedure. This is the current final version of 
 
 # Requirements
 
-Tested on Ubuntu 16.04 and Windows 7 with python 2.7.
+Tested on Ubuntu 16.04 and Windows 7 with Python 2.7.
 
 Modules version:
 
