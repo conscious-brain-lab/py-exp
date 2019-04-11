@@ -29,7 +29,7 @@ class staircaseHelper:
     
     # Initialize staircase
     def __init__(self, dv0 = 1, conv_p = .75, stepsize = 3, reversals = 20,
-                 stepdown_rule = 1, min_correction = None):
+                 stepdown_rule = 1, min_correction = None, max_correction = None):
         # Save space writing s instead of self
         s = self
 
@@ -40,7 +40,8 @@ class staircaseHelper:
         s.stepsize = stepsize           # Step size
         s.stepdown_rule = stepdown_rule # Corrects in a row before step down
         s.min = min_correction          # If a number, prevent from going lower
-                
+        s.max = max_correction          # If a number, prevent from going higher        
+
         s.factor = s.p / (1 - s.p)      # Calculate adjustment factor
         
         # Trackers
@@ -96,6 +97,9 @@ class staircaseHelper:
              # If prevent from going lower than min
              if s.dv < s.min:
                  s.dv = s.min
+             # If prevent fromt going higher than max
+             if s.dv > s.max:
+                 s.dv = s.max             
              # If max. number of reversals end staircase
              if s.revn >= s.reversals:
                  s.staircase_over = True
