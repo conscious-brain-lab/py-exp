@@ -10,7 +10,7 @@ conda env create -f exp.yml
 This should install the Conda environment, containing all the correct Python packages necessary for running these experiments.
 To then activate this environment type:
 
-conda activate exp.
+conda activate exp
 
 ## detection_task
 Detection task with eyetracker and EEG
